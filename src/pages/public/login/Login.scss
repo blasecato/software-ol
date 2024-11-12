@@ -17,7 +17,7 @@
       }
       .form-login {
         .button-link {
-          color: $colors-black;
+          color: var(--colors-black);
           font-weight: 500;
           text-decoration: underline;
         }

@@ -25,7 +25,7 @@
         height: 8px;
         width: 8px;
         border-radius: 50%;
-        background-color: $colors-primary;
+        background-color: var(--colors-primary);
         position: absolute;
         top: 6px;
         z-index: 1;
@@ -37,7 +37,7 @@
 .popover-alert-item {
   .notification {
     .circle-icon {
-      color: $colors-white;
+      color: var(--colors-white);
       width: 30px;
       height: 30px;
       border-radius: 50%;

@@ -24,7 +24,7 @@
       .body-bold,
       .body-regular,
       .h2 {
-        color: $colors-white;
+        color: var(--colors-white);
       }
     }
   }
@@ -56,13 +56,13 @@
   }
   .card-graph {
     width: 100%;
-    background-color: $colors-white;
+    background-color: var(--colors-white);
     box-shadow: 3px 4px 16px 1px rgba(0, 0, 0, 0.068);
     padding: 15px;
     border-radius: 10px;
     height: 500px;
     .sub-title {
-      color: $colors-primary;
+      color: var(--colors-primary);
     }
     .cont {
       height: 6px;
@@ -71,14 +71,14 @@
     }
     a {
       text-decoration: none;
-      color: $colors-primary;
+      color: var(--colors-primary);
     }
   }
   .card-big {
     padding: 20px 0;
     height: auto;
     .h1 {
-      color: $colors-primary;
+      color: var(--colors-primary);
     }
     .box {
       width: 36%;
@@ -87,7 +87,7 @@
         width: 25%;
       }
       &:last-child {
-        border-left: 1px solid $desisable;
+        border-left: 1px solid var(--desisable);
       }
     }
     .small-detail {
@@ -95,3 +95,4 @@
     }
   }
 }
+

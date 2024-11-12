@@ -2,7 +2,7 @@
 .Users {
   padding: 20px;
   border-radius: 20px;
-  background-color: $colors-white;
+  background-color: var(--colors-white);
   box-shadow: 9px 8px 15px 1px rgba(0, 0, 0, 0.2);
   .Table {
     .button-primary {

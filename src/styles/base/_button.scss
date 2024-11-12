@@ -18,15 +18,15 @@
   &-cancel {
     @include button-txt;
     border: none;
-    color: $colors-primary;
+    color: var(--colors-primary);
     border-radius: 10px;
     padding: 16.5px 28px;
-    border: 2px solid $colors-primary;
+    border: 2px solid var(--colors-primary);
     height: 45px;
     &:hover,
     &:active {
-      color: $colors-primary !important;
-      border: 2px solid $colors-primary !important;
+      color: var(--colors-primary) !important;
+      border: 2px solid var(--colors-primary) !important;
     }
   }
   &-link {

@@ -22,6 +22,6 @@
 }
 .small-detail {
   @include small-detail;
-  color: $desisable;
+  color: var(--desisable);
 }
 
