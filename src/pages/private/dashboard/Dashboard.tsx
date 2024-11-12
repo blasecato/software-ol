@@ -6,7 +6,7 @@ import CardClimate from "./cards/CardClimate";
 import CardColors from "./cards/CardColors";
 import CardServerDetail from "./cards/CardServerDetail";
 import CardCommitsReport from "./cards/CardCommitsReport";
-import CardsResume from "./cards/CardsResume";
+import CardResume from "./cards/CardResume";
 import { getToken } from "../../../services/_common/api";
 import { IAdmin } from "../../../services/auth/auth.constants";
 
@@ -84,7 +84,7 @@ const Dashboard = () => {
       </div>
       <div className="item-big">
         {releaseResume.data !== null &&
-          <CardsResume releaseResume={releaseResume.data} />
+          <CardResume releaseResume={releaseResume.data} />
         }
       </div>
     </section>

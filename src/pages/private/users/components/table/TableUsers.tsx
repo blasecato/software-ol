@@ -3,12 +3,12 @@ import { Table } from 'antd';
 import type { TableProps } from 'antd';
 import { EditOutlined } from '@ant-design/icons';
 import ModalFormUsers from '../modal/ModalFormUser';
-import ModalDelete from '../../../../components/modals/ModalDelete';
-import { IUsers } from '../../../../services/users/users.constants';
-import avatarPng from '../../../../assets/images/avatar.png';
+import ModalDelete from '../../../../../components/modals/ModalDelete';
+import { IUsers } from '../../../../../services/users/users.constants';
+import avatarPng from '../../../../../assets/images/avatar.png';
 import { useEffect, useState } from 'react';
-import { getToken } from '../../../../services/_common/api';
-import { IAdmin } from '../../../../services/auth/auth.constants';
+import { getToken } from '../../../../../services/_common/api';
+import { IAdmin } from '../../../../../services/auth/auth.constants';
 
 interface Props {
   listUsers: IUsers[]

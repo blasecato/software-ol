@@ -15,7 +15,7 @@ interface Props {
   releaseResume: IReleaseResume
 }
 
-const CardsResume = ({ releaseResume }: Props) => {
+const CardResume = ({ releaseResume }: Props) => {
   const [isData, setData] = useState<any>()
 
   function formatChartData(ncState: INcState) {
@@ -66,4 +66,4 @@ const CardsResume = ({ releaseResume }: Props) => {
   )
 }
 
-export default CardsResume
+export default CardResume

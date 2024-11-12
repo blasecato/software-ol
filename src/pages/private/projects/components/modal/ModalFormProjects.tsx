@@ -1,7 +1,7 @@
 
 import { Button, Modal } from 'antd';
 import React, { useState } from 'react';
-import { IProjects } from '../../../../services/projects/projects.constants';
+import { IProjects } from '../../../../../services/projects/projects.constants';
 import FormProjects from '../formProject/FormProjects';
 
 interface Props {

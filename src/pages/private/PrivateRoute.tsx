@@ -4,6 +4,7 @@ import Page404 from "../../components/404/404";
 import Dashboard from "./dashboard/Dashboard";
 import Projects from "./projects/Projects";
 import Users from "./users/Users";
+import Roles from "./roles/Roles";
 
 const PrivateRoute = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const PrivateRoute = createBrowserRouter([
       {
         path: "/users",
         element: <Users />,
+      },
+      {
+        path: "/roles",
+        element: <Roles />,
       },
     ],
   },

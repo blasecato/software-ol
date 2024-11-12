@@ -9,7 +9,7 @@ import { getToken } from './services/_common/api';
 import Loader from './components/loader/Loader';
 import { MenuProvider } from './context/menuContext';
 
-function App() {
+function Router() {
   const { authentication, isAuthenticated } = useAppSelector(({ auth }) => auth);
   const [isAuth, setAuthenticated] = useState<boolean>(false)
   const [isLoading, setLoading] = useState<boolean>(true)
@@ -43,4 +43,4 @@ function App() {
   )
 }
 
-export default App
+export default Router

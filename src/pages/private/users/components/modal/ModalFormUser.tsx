@@ -2,7 +2,7 @@
 import { Button, Modal } from 'antd';
 import React, { useState } from 'react';
 import FormUser from '../formUser/FormUser';
-import { IUsers } from '../../../../services/users/users.constants';
+import { IUsers } from '../../../../../services/users/users.constants';
 
 interface Props {
   user?: IUsers

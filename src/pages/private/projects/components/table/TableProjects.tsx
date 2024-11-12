@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Table } from 'antd';
 import type { TableProps } from 'antd';
-import { IProjects } from '../../../../services/projects/projects.constants';
+import { IProjects } from '../../../../../services/projects/projects.constants';
 import { CheckOutlined, CloseCircleOutlined, EditOutlined } from '@ant-design/icons';
-import ModalFormProjects from '../modal/ModalFormProjects';
-import ModalDelete from '../../../../components/modals/ModalDelete';
+import ModalFormProjects from '../../components/modal/ModalFormProjects';
+import ModalDelete from '../../../../../components/modals/ModalDelete';
 import { useEffect, useState } from 'react';
-import { getToken } from '../../../../services/_common/api';
-import { IAdmin } from '../../../../services/auth/auth.constants';
+import { getToken } from '../../../../../services/_common/api';
+import { IAdmin } from '../../../../../services/auth/auth.constants';
 
 interface Props {
   listProjects: IProjects[]

@@ -1,10 +1,10 @@
 
 import { Button, Modal } from 'antd';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IProjects } from '../../services/projects/projects.constants';
 import { IUsers } from '../../services/users/users.constants';
 import { DeleteOutlined } from '@ant-design/icons';
-import { useAppDispatch, } from '../../services/_common/hooks';
+import { useAppDispatch, useAppSelector } from '../../services/_common/hooks';
 import { deleteProject as deleteProjectAction } from '../../services/projects/projects.thunk';
 import { deleteUser as deleteUserAction } from '../../services/users/users.thunk';
 
@@ -17,6 +17,8 @@ interface Props {
 const ModalDelete = ({ project, user, title }: Props) => {
   const dispatch = useAppDispatch();
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const { deleteProject } = useAppSelector(({ projects }) => projects);
+  const { deleteUser } = useAppSelector(({ users }) => users);
 
   const handleOk = (projectDelete?: IProjects, userDelete?: IUsers) => {
     if (projectDelete?.id !== undefined) {
@@ -27,6 +29,11 @@ const ModalDelete = ({ project, user, title }: Props) => {
     }
   };
 
+  useEffect(() => {
+    if (deleteProject?.loading === 'success' || deleteUser?.loading === 'success') {
+      setIsModalOpen(false)
+    }
+  }, [deleteProject?.loading, deleteUser?.loading])
 
   return (
     <section>

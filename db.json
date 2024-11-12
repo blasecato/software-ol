@@ -2009,22 +2009,13 @@
   ],
   "users": [
     {
-      "name": "Camilla andrea",
-      "last_name": "Wooten",
-      "list": "Java|.Net|Python|Angular|React-Native|VueJS|NodeJS|SQLServer",
+      "name": "Gradysf",
+      "last_name": "Stevens",
+      "list": "VueJS|Angular|.Net|React-Native|React|Java|Python|SQLServer|NodeJS",
       "area": "Soporte",
       "rol": 1,
       "url_photo": "",
-      "id": "1"
-    },
-    {
-      "id": "2",
-      "name": "Grady",
-      "last_name": "Stevens",
-      "url_photo": "",
-      "rol": 1,
-      "list": "VueJS|Angular|.Net|React-Native|React|Java|Python|SQLServer|NodeJS",
-      "area": "Soporte"
+      "id": "2"
     },
     {
       "id": "3",
@@ -2033,15 +2024,6 @@
       "url_photo": "",
       "rol": 1,
       "list": "React|React-Native|VueJS|Python|NodeJS|.Net|Angular|SQLServer",
-      "area": "Staff"
-    },
-    {
-      "id": "4",
-      "name": "Whilemina",
-      "last_name": "George",
-      "url_photo": "",
-      "rol": 1,
-      "list": "SQLServer|Python|NodeJS|React-Native|VueJS|.Net|Angular|Java|React",
       "area": "Staff"
     },
     {

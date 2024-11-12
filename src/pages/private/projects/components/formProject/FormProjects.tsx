@@ -1,9 +1,9 @@
 
 import type { FormProps } from 'antd';
 import { Button, Checkbox, Form, Input, message } from 'antd';
-import { type IProjects } from '../../../../services/projects/projects.constants';
-import { useAppDispatch } from '../../../../services/_common/hooks';
-import { createProject, updateProject } from '../../../../services/projects/projects.thunk';
+import { type IProjects } from '../../../../../services/projects/projects.constants';
+import { useAppDispatch } from '../../../../../services/_common/hooks';
+import { createProject, updateProject } from '../../../../../services/projects/projects.thunk';
 
 interface Props {
   handleCancel: () => void
@@ -34,12 +34,13 @@ const FormProjects = ({ handleCancel, project }: Props) => {
 
     if (project === undefined) {
       dispatch(createProject({ project: newValues }))
+      handleCancel()
     } else {
       newValues.id = project.id
       dispatch(updateProject({ project: newValues }))
+      handleCancel()
     }
   };
-
 
 
   const onFinishFailed: FormProps<IProjects>['onFinishFailed'] = () => {

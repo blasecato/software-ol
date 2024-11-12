@@ -1,16 +1,16 @@
 
 import type { FormProps } from 'antd';
 import { Button, Form, Input, message, Select } from 'antd';
-import { useAppDispatch } from '../../../../services/_common/hooks';
-import { IUsers } from '../../../../services/users/users.constants';
-import { createUser, updateUser } from '../../../../services/users/users.thunk';
+import { useAppDispatch } from '../../../../../services/_common/hooks';
+import { IUsers } from '../../../../../services/users/users.constants';
+import { createUser, updateUser } from '../../../../../services/users/users.thunk';
 
 interface Props {
   handleCancel: () => void
   user?: IUsers
 }
 
-const FormProjects = ({ handleCancel, user }: Props) => {
+const FormUser = ({ handleCancel, user }: Props) => {
   const dispatch = useAppDispatch();
 
   const roles = [
@@ -29,13 +29,13 @@ const FormProjects = ({ handleCancel, user }: Props) => {
 
     if (user === undefined) {
       dispatch(createUser({ user: newValues }))
+      handleCancel()
     } else {
       newValues.id = user.id
       dispatch(updateUser({ user: newValues }))
+      handleCancel()
     }
   };
-
-
 
   const onFinishFailed: FormProps<IUsers>['onFinishFailed'] = () => {
     message.warning('llene el formulario')
@@ -114,4 +114,4 @@ const FormProjects = ({ handleCancel, user }: Props) => {
   );
 }
 
-export default FormProjects;
+export default FormUser;

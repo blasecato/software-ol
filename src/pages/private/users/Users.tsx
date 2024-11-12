@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import TableUsers from "./table/TableUsers"
+import TableUsers from "./components/table/TableUsers"
 import { useAppDispatch, useAppSelector } from "../../../services/_common/hooks";
 import { getUsers } from "../../../services/users/users.thunk";
 import { IUsers } from "../../../services/users/users.constants";
-import ModalFormUsers from "./modal/ModalFormUser";
+import ModalFormUsers from "./components/modal/ModalFormUser";
 
 const Users = () => {
   const dispatch = useAppDispatch();

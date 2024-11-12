@@ -20,7 +20,7 @@ export const Menu = () => {
     { id: 1, title: 'Dashboard', icon: <DashboardOutlined />, path: '/' },
     { id: 2, title: 'Proyectos', icon: <LayoutOutlined />, path: '/projects' },
     { id: 3, title: 'Usuarios', icon: <UserOutlined />, path: '/users' },
-    { id: 4, title: 'Roles', icon: <ApiOutlined />, path: '/' },
+    { id: 4, title: 'Roles', icon: <ApiOutlined />, path: '/roles' },
   ]
 
   const handleClick = (rute: string) => {

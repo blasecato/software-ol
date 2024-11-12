@@ -1,9 +1,9 @@
-import TableProjects from "./table/TableProjects"
+import TableProjects from "./components/table/TableProjects"
 import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../../services/_common/hooks";
 import { getProjects } from "../../../services/projects/projects.thunk";
 import { IProjects } from "../../../services/projects/projects.constants";
-import ModalFormProjects from "./modal/ModalFormProjects";
+import ModalFormProjects from "./components/modal/ModalFormProjects";
 
 const Projects = () => {
   const dispatch = useAppDispatch();
