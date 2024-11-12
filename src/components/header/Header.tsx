@@ -17,10 +17,11 @@ import {
   WarningOutlined
 } from "@ant-design/icons";
 import useMenuContext from "../../hooks/useMenuContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
   const { notifications, tasks } = useAppSelector(({ notification }) => notification);
   const { changeActionMenu }: any = useMenuContext()
   const [listNotificatios, setListNotifications] = useState<INotification[]>([])
@@ -96,6 +97,7 @@ const Header = () => {
   const contentAvatar = () => {
     const logout = () => {
       localStorage.removeItem('Token');
+      navigate('/')
       window.location.reload()
     }
     return (
