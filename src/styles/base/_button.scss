@@ -1,6 +1,11 @@
 .button {
+  text-align: center;
+  font-family: var(--Lato);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
   &-primary {
-    @include button-txt;
     background: var(--colors-primary);
     border: none;
     color: var(--colors-white);
@@ -16,7 +21,6 @@
     }
   }
   &-cancel {
-    @include button-txt;
     border: none;
     color: var(--colors-primary);
     border-radius: 10px;
@@ -30,7 +34,6 @@
     }
   }
   &-link {
-    @include button-txt;
     background: transparent;
     border: none;
     padding: 0 !important;

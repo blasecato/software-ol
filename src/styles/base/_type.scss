@@ -1,27 +1,65 @@
 .h1 {
-  @include h1;
+  font-family: var(--Lato);
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 105%;
+  white-space: break-spaces;
 }
 .h2 {
-  @include h2;
+  font-family: var(--Lato);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 120%;
 }
 .h3 {
-  @include h3;
+  font-family: var(--Lato);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
 }
 .body-bold {
-  @include body-bold;
+  font-family: var(--Roboto);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150.187%;
 }
 .body-regular {
-  @include body-regular;
+  font-family: var(--Roboto);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
 }
 .button-txt {
-  @include button-txt;
+  text-align: center;
+  font-family: var(--Lato);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .sub-title {
-  @include sub-title;
+  white-space: break-spaces;
+  font-family: var(--Lato);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.4px;
 }
 .small-detail {
-  @include small-detail;
+  white-space: break-spaces;
+  font-family: var(--Lato);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.4px;
   color: var(--desisable);
 }
 

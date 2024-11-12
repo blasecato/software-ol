@@ -1,9 +1,9 @@
-@import "utils/mixins-fonts";
-@import "utils/variables";
-@import "modules/all";
+@use "utils/mixins-fonts" as *;
+@use "utils/variables" as *;
+@use "modules/all" as *;
 
-@import "./base/type";
-@import "./base/global";
-@import "./base/reset";
-@import "./base/button";
+@use "./base/type" as *;
+@use "./base/global" as *;
+@use "./base/reset" as *;
+@use "./base/button" as *;
 

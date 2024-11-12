@@ -59,13 +59,13 @@
   }
   .head {
     margin-bottom: 15px;
-    border-bottom: 1px solid $input-line;
+    border-bottom: 1px solid var(--input-line);
     padding-bottom: 15px;
   }
   .task {
     height: 50px;
     border-radius: 5px;
-    border: 1px solid $input-line;
+    border: 1px solid var(--input-line);
     padding: 20px;
     &-check {
       .ant-checkbox-wrapper {
