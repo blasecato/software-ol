@@ -15,21 +15,24 @@ const Dashboard = () => {
   const [user, setUser] = useState<IAdmin>()
   const { dashboardCards, cpuReport, reportCommits, releaseResume } = useAppSelector(({ dashboard }) => dashboard);
   const { notifications } = useAppSelector(({ notification }) => notification);
+  const { authentication } = useAppSelector(({ auth }) => auth);
 
   useEffect(() => {
     dispatch(getCardsInfo());
     dispatch(getCpuReport());
     dispatch(getReportCommits());
     dispatch(getReleaseResume());
-    const token: any = getToken()
-    setUser(token);
+    setTimeout(() => {
+      const token: any = getToken()
+      setUser(token);
+    }, 1000);
   }, [dispatch])
 
   useEffect(() => {
     if (user?.location !== undefined) {
       dispatch(getWeather({ city: user?.location }));
     }
-  }, [dispatch, user])
+  }, [dispatch, user, authentication, dashboardCards])
 
   return (
     <section className="Dashboard">

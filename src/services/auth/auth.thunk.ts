@@ -24,6 +24,7 @@ export const login = createAsyncThunk(
       generateToken(response[0]).then(token => {
         localStorage.setItem('Token', token);
       });
+
       return response;
     } catch (error: any) {
       return rejectWithValue(error.message);

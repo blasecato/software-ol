@@ -25,7 +25,7 @@ const CardClimate = () => {
           :
           <MoonOutlined />
         }
-        <h1 className="h1">{Math.trunc(climate.data?.main?.temp)}°C</h1>
+        <h1 className="h1">{Number.isNaN(Math.trunc(climate.data?.main?.temp)) ? 0 : Math.trunc(climate.data?.main?.temp)}°C</h1>
         <div className='city'>{climate.data?.name}</div>
       </div>
       <img src={FamilyClimatePng} alt="family" className='family' />
