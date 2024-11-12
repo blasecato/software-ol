@@ -1,11 +1,9 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import type { FormProps } from 'antd';
 import { Button, Checkbox, Form, Input, message } from 'antd';
 import { type IProjects } from '../../../../services/projects/projects.constants';
-import { useAppDispatch, useAppSelector } from '../../../../services/_common/hooks';
+import { useAppDispatch } from '../../../../services/_common/hooks';
 import { createProject, updateProject } from '../../../../services/projects/projects.thunk';
-import { useEffect } from 'react';
-
 
 interface Props {
   handleCancel: () => void
@@ -14,8 +12,6 @@ interface Props {
 
 const FormProjects = ({ handleCancel, project }: Props) => {
   const dispatch = useAppDispatch();
-  const { loading }: any = useAppSelector(({ projects }) => projects.createProject);
-  const { loading: loadUpdate }: any = useAppSelector(({ projects }) => projects.updateProject);
 
   const onFinish: FormProps<IProjects>['onFinish'] = (values) => {
     const newValues: IProjects = {
@@ -44,13 +40,7 @@ const FormProjects = ({ handleCancel, project }: Props) => {
     }
   };
 
-  useEffect(() => {
-    if (loading === 'success' || loadUpdate === 'success') {
-      setTimeout(() => {
-        window.location.reload()
-      }, 1000);
-    }
-  }, [loading, loadUpdate])
+
 
   const onFinishFailed: FormProps<IProjects>['onFinishFailed'] = () => {
     message.warning('llene el formulario')

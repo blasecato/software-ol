@@ -216,24 +216,6 @@
   },
   "projects": [
     {
-      "project_name": "Tortor Dictum Institute",
-      "repo_url": "https://",
-      "client": "Phasellus Limited",
-      "developers": "Victor Hugo Conto Carvajal|Jurgen David Lozano Valencia|Sandra Lorena Buitrón Ruiz|Sandra Lorena Buitrón Ruiz|Breyner Albarracín Lozada",
-      "ci": true,
-      "cd": false,
-      "frontend_tecnology": "React|React-Native",
-      "backend_tecnology": ".Net, NodeJS",
-      "databases": "SQLServer|PosgresSQL",
-      "errors_count": 30,
-      "warning_count": 2,
-      "deploy_count": 6,
-      "percentage_completion": 70,
-      "report_nc": 455,
-      "status": "En Desarrollo",
-      "id": "1"
-    },
-    {
       "id": "2",
       "project_name": "Velit Justo LLC",
       "repo_url": "https://",
@@ -1995,6 +1977,24 @@
       "percentage_completion": 0,
       "report_nc": 0,
       "status": "En Desarrollo"
+    },
+    {
+      "project_name": "software OL",
+      "repo_url": "OL",
+      "client": "andres",
+      "developers": "sebastian | andres | miguel",
+      "ci": true,
+      "cd": true,
+      "frontend_tecnology": "react",
+      "backend_tecnology": ".NET",
+      "databases": "postgres",
+      "errors_count": 0,
+      "warning_count": 0,
+      "deploy_count": 0,
+      "percentage_completion": 0,
+      "report_nc": 0,
+      "status": "En Desarrollo",
+      "id": "y8tnuy3"
     }
   ],
   "rols": [

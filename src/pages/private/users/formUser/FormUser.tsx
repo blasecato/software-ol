@@ -1,11 +1,9 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import type { FormProps } from 'antd';
 import { Button, Form, Input, message, Select } from 'antd';
-import { useAppDispatch, useAppSelector } from '../../../../services/_common/hooks';
-import { useEffect } from 'react';
+import { useAppDispatch } from '../../../../services/_common/hooks';
 import { IUsers } from '../../../../services/users/users.constants';
 import { createUser, updateUser } from '../../../../services/users/users.thunk';
-
 
 interface Props {
   handleCancel: () => void
@@ -14,8 +12,6 @@ interface Props {
 
 const FormProjects = ({ handleCancel, user }: Props) => {
   const dispatch = useAppDispatch();
-  const { loading }: any = useAppSelector(({ users }) => users.createUser);
-  const { loading: loadUpdate }: any = useAppSelector(({ users }) => users.updateUser);
 
   const roles = [
     { value: 1, label: "Admin" },
@@ -39,13 +35,7 @@ const FormProjects = ({ handleCancel, user }: Props) => {
     }
   };
 
-  useEffect(() => {
-    if (loading === 'success' || loadUpdate === 'success') {
-      setTimeout(() => {
-        window.location.reload()
-      }, 1000);
-    }
-  }, [loading, loadUpdate])
+
 
   const onFinishFailed: FormProps<IUsers>['onFinishFailed'] = () => {
     message.warning('llene el formulario')
