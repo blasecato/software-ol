@@ -96,8 +96,8 @@ const Header = () => {
 
   const contentAvatar = () => {
     const logout = () => {
-      localStorage.removeItem('Token');
       navigate('/')
+      localStorage.removeItem('Token');
       window.location.reload()
     }
     return (
