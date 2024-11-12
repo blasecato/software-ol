@@ -2,9 +2,10 @@
 
 import type { FormProps, SelectProps } from 'antd';
 import { Button, Form, Input, message, Select } from 'antd';
-import { useAppDispatch } from '../../../../../services/_common/hooks';
+import { useAppDispatch, useAppSelector } from '../../../../../services/_common/hooks';
 import { IUsers } from '../../../../../services/users/users.constants';
 import { createUser, updateUser } from '../../../../../services/users/users.thunk';
+import { useEffect } from 'react';
 
 interface Props {
   handleCancel: () => void
@@ -12,6 +13,8 @@ interface Props {
 }
 
 const FormUser = ({ handleCancel, user }: Props) => {
+  const { createUser: create, updateUser: update } = useAppSelector(({ users }) => users);
+
   const dispatch = useAppDispatch();
 
   const roles: SelectProps['options'] = [
@@ -38,13 +41,19 @@ const FormUser = ({ handleCancel, user }: Props) => {
     { value: "JAVA", label: "JAVA" },
   ]
   const onFinish: FormProps<IUsers>['onFinish'] = (values) => {
+
     const namesList: any = values.list;
-    const list = namesList?.join(" | ");
+    let list: any = undefined
+
+    if (Array.isArray(namesList)) {
+      list = namesList?.join(" | ");
+    }
+
 
     const newValues: IUsers = {
       name: values.name,
       last_name: values.last_name,
-      list: list,
+      list: list ?? values.list,
       area: `${values.area}`,
       rol: values?.rol,
       url_photo: '',
@@ -63,6 +72,14 @@ const FormUser = ({ handleCancel, user }: Props) => {
   const onFinishFailed: FormProps<IUsers>['onFinishFailed'] = () => {
     message.warning('llene el formulario')
   };
+
+  useEffect(() => {
+    if (update?.loading === 'success' || create?.loading === 'success') {
+      setTimeout(() => {
+        window.location.reload()
+      }, 1000);
+    }
+  }, [create, update])
 
   return (
     <Form

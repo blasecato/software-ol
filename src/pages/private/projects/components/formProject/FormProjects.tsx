@@ -3,9 +3,10 @@
 import type { FormProps } from 'antd';
 import { Button, Checkbox, Form, Input, message, Select } from 'antd';
 import { type IProjects } from '../../../../../services/projects/projects.constants';
-import { useAppDispatch } from '../../../../../services/_common/hooks';
+import { useAppDispatch, useAppSelector } from '../../../../../services/_common/hooks';
 import { createProject, updateProject } from '../../../../../services/projects/projects.thunk';
 import type { SelectProps } from 'antd';
+import { useEffect } from 'react';
 
 
 interface Props {
@@ -15,6 +16,7 @@ interface Props {
 
 const FormProjects = ({ handleCancel, project }: Props) => {
   const dispatch = useAppDispatch();
+  const { createProject: create, updateProject: update } = useAppSelector(({ projects }) => projects);
 
   const onFinish: FormProps<IProjects>['onFinish'] = (values) => {
 
@@ -86,6 +88,15 @@ const FormProjects = ({ handleCancel, project }: Props) => {
     { value: '.NET', label: ".NET" },
     { value: 'Java', label: "Java" },
   ];
+
+  useEffect(() => {
+    if (update?.loading === 'success' || create?.loading === 'success') {
+      setTimeout(() => {
+        window.location.reload()
+      }, 1000);
+    }
+  }, [create, update])
+
 
   return (
     <Form

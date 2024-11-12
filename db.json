@@ -216,12 +216,11 @@
   },
   "projects": [
     {
-      "id": "2",
       "project_name": "Velit Justo LLC",
       "repo_url": "https://",
       "client": "Venenatis Limited",
       "developers": "Sandra Lorena Buitrón Ruiz|Franci Eliana Viveros Martínez|Alvaro Eduardo Zapata|Joan Alexis Cordoba Narvaez|Victor Hugo Conto Carvajal|Leonardo Zapata Mora|Breyner Albarracín Lozada",
-      "ci": false,
+      "ci": true,
       "cd": false,
       "frontend_tecnology": "VueJS|React-Native|Angular|React",
       "backend_tecnology": "Python, .Net, NodeJS",
@@ -231,25 +230,8 @@
       "deploy_count": 9,
       "percentage_completion": 92,
       "report_nc": 104,
-      "status": "En Desarrollo"
-    },
-    {
-      "id": "3",
-      "project_name": "Enim Consequat Inc.",
-      "repo_url": "https://",
-      "client": "Et PC",
-      "developers": "Aymer Ivan Obando Valois|Breyner Albarracín Lozada|Sandra Lorena Buitrón Ruiz|Leonardo Zapata Mora|Maria del Pilar Muñoz Casañas|Erik Steven Alegria Mina|Franci Eliana Viveros Martínez",
-      "ci": false,
-      "cd": false,
-      "frontend_tecnology": "VueJS|Angular",
-      "backend_tecnology": "NodeJS, Java",
-      "databases": "SQLServer|MySQL|MongoDB|PosgresSQL",
-      "errors_count": 20,
-      "warning_count": 1,
-      "deploy_count": 13,
-      "percentage_completion": 70,
-      "report_nc": 194,
-      "status": "En Desarrollo"
+      "status": "En Desarrollo",
+      "id": "2"
     },
     {
       "id": "4",
@@ -378,14 +360,13 @@
       "status": "En Desarrollo"
     },
     {
-      "id": "15",
       "project_name": "Sapien Institute",
       "repo_url": "https://",
       "client": "Sit Amet Ornare Corporation",
       "developers": "Jurgen David Lozano Valencia|Sandra Lorena Buitrón Ruiz|Sandra Lorena Buitrón Ruiz|Aymer Ivan Obando Valois|Maria del Pilar Muñoz Casañas",
       "ci": false,
       "cd": false,
-      "frontend_tecnology": "Angular|VueJS",
+      "frontend_tecnology": "Angular|VueJS | Angular",
       "backend_tecnology": "NodeJS, Java",
       "databases": "SQLServer",
       "errors_count": 90,
@@ -393,7 +374,8 @@
       "deploy_count": 10,
       "percentage_completion": 4,
       "report_nc": 330,
-      "status": "En Desarrollo"
+      "status": "En Desarrollo",
+      "id": "15"
     },
     {
       "id": "16",
@@ -2010,7 +1992,7 @@
   ],
   "users": [
     {
-      "name": "Gradysf",
+      "name": "Gradysfs",
       "last_name": "Stevens",
       "list": "Python | .Net | VueJS | React | SQLServer",
       "area": "Soporte",
@@ -2908,6 +2890,15 @@
       "rol": 1,
       "url_photo": "",
       "id": "xDMDsQT"
+    },
+    {
+      "name": "Gradysfs",
+      "last_name": "ss",
+      "list": "Python",
+      "area": "1",
+      "rol": 2,
+      "url_photo": "",
+      "id": "aCfuSlW"
     }
   ]
 }

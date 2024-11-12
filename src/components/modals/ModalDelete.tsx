@@ -32,6 +32,9 @@ const ModalDelete = ({ project, user, title }: Props) => {
   useEffect(() => {
     if (deleteProject?.loading === 'success' || deleteUser?.loading === 'success') {
       setIsModalOpen(false)
+      setTimeout(() => {
+        window.location.reload()
+      }, 1000);
     }
   }, [deleteProject?.loading, deleteUser?.loading])
 
