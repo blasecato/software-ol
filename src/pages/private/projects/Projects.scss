@@ -47,5 +47,14 @@
       width: 49%;
     }
   }
+  :where(.css-dev-only-do-not-override-apn68).ant-select-single {
+    font-size: 14px;
+    height: 32px;
+    height: 40px;
+  }
+  .ant-select-selector {
+    border-radius: 0px;
+    min-height: 40px;
+  }
 }
 

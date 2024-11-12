@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
-import type { FormProps } from 'antd';
+import type { FormProps, SelectProps } from 'antd';
 import { Button, Form, Input, message, Select } from 'antd';
 import { useAppDispatch } from '../../../../../services/_common/hooks';
 import { IUsers } from '../../../../../services/users/users.constants';
@@ -13,16 +14,38 @@ interface Props {
 const FormUser = ({ handleCancel, user }: Props) => {
   const dispatch = useAppDispatch();
 
-  const roles = [
+  const roles: SelectProps['options'] = [
     { value: 1, label: "Admin" },
     { value: 2, label: "Dev" }
   ]
+  const areas: SelectProps['options'] = [
+    { value: 1, label: "Soporte" },
+    { value: 2, label: "Desarrollo" },
+    { value: 3, label: "Diseño" },
+    { value: 4, label: "RH" },
+  ]
+  const tecnologies: SelectProps['options'] = [
+    { value: "React-Native", label: "React-Native" },
+    { value: "Python", label: "Python" },
+    { value: ".Net", label: ".Net" },
+    { value: "VueJS", label: "VueJS" },
+    { value: "React", label: "React" },
+    { value: "SQLServer", label: "SQLServer" },
+    { value: "Java", label: "Java" },
+    { value: "Angular", label: "Angular" },
+    { value: "NodeJS", label: "NodeJS" },
+    { value: "mySql", label: "mySql" },
+    { value: "JAVA", label: "JAVA" },
+  ]
   const onFinish: FormProps<IUsers>['onFinish'] = (values) => {
+    const namesList: any = values.list;
+    const list = namesList?.join(" | ");
+
     const newValues: IUsers = {
       name: values.name,
       last_name: values.last_name,
-      list: values.list,
-      area: values.area,
+      list: list,
+      area: `${values.area}`,
       rol: values?.rol,
       url_photo: '',
     }
@@ -43,7 +66,7 @@ const FormUser = ({ handleCancel, user }: Props) => {
 
   return (
     <Form
-      name="formProject"
+      name="formUser"
       initialValues={user}
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
@@ -78,6 +101,7 @@ const FormUser = ({ handleCancel, user }: Props) => {
             defaultValue={user?.rol}
             style={{ width: '100%' }}
             options={roles}
+            placeholder="seleccione"
           />
         </Form.Item>
       </div>
@@ -88,7 +112,14 @@ const FormUser = ({ handleCancel, user }: Props) => {
           name="list"
           rules={[{ required: true, message: 'Porfavor seleccione las tecnologias!' }]}
         >
-          <Input defaultValue={user?.list} className='custom-input' placeholder='seleccionar' />
+          {/* <Input defaultValue={user?.list} className='custom-input' placeholder='seleccionar' />
+           */}
+          <Select
+            mode="multiple"
+            allowClear
+            placeholder="Seleccione"
+            options={tecnologies}
+          />
         </Form.Item>
       </div>
 
@@ -98,7 +129,12 @@ const FormUser = ({ handleCancel, user }: Props) => {
           name="area"
           rules={[{ required: true, message: 'Porfavor seleccione la Area!' }]}
         >
-          <Input defaultValue={user?.area} className='custom-input' placeholder='Seleccionar' />
+          <Select
+            defaultValue={user?.area}
+            style={{ width: '100%' }}
+            options={areas}
+            placeholder="seleccione"
+          />
         </Form.Item>
       </div>
 

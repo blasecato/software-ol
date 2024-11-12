@@ -1926,7 +1926,6 @@
       "status": "En Desarrollo"
     },
     {
-      "id": "8d9e",
       "project_name": "software OL",
       "repo_url": "OL",
       "client": "andres",
@@ -1935,58 +1934,24 @@
       "cd": true,
       "frontend_tecnology": "react",
       "backend_tecnology": ".NET",
-      "databases": "postgres",
+      "databases": "postgres | mysql",
       "errors_count": 0,
       "warning_count": 0,
       "deploy_count": 0,
       "percentage_completion": 0,
       "report_nc": 0,
-      "status": "En Desarrollo"
+      "status": "En Desarrollo",
+      "id": "bANTOGU"
     },
     {
-      "id": "8f7c",
-      "project_name": "software OL",
+      "project_name": "software OL 4",
       "repo_url": "OL",
       "client": "andres",
-      "developers": "sebastian | andres | miguel",
+      "developers": "Sebastian | Blas",
       "ci": true,
-      "cd": true,
-      "frontend_tecnology": "react",
-      "backend_tecnology": ".NET",
-      "databases": "postgres",
-      "errors_count": 0,
-      "warning_count": 0,
-      "deploy_count": 0,
-      "percentage_completion": 0,
-      "report_nc": 0,
-      "status": "En Desarrollo"
-    },
-    {
-      "id": "784f",
-      "project_name": "software OL",
-      "repo_url": "OL",
-      "client": "andres",
-      "developers": "sebastian | andres | miguel",
-      "ci": true,
-      "frontend_tecnology": "react",
-      "backend_tecnology": ".NET",
-      "databases": "postgres",
-      "errors_count": 0,
-      "warning_count": 0,
-      "deploy_count": 0,
-      "percentage_completion": 0,
-      "report_nc": 0,
-      "status": "En Desarrollo"
-    },
-    {
-      "project_name": "software OL",
-      "repo_url": "OL",
-      "client": "andres",
-      "developers": "sebastian | andres | miguel",
-      "ci": true,
-      "cd": true,
-      "frontend_tecnology": "react",
-      "backend_tecnology": ".NET",
+      "cd": false,
+      "frontend_tecnology": "React | Angular",
+      "backend_tecnology": "Nestjs | .NET",
       "databases": "postgres",
       "errors_count": 0,
       "warning_count": 0,
@@ -1994,7 +1959,43 @@
       "percentage_completion": 0,
       "report_nc": 0,
       "status": "En Desarrollo",
-      "id": "y8tnuy3"
+      "id": "kCmwmBu"
+    },
+    {
+      "project_name": "Tortor Dictum Institute",
+      "repo_url": "Tortor Dictum Institute",
+      "client": "Tortor Dictum Institute",
+      "developers": "Sebastian | Blas | Carlos",
+      "ci": true,
+      "cd": true,
+      "frontend_tecnology": "React | Angular",
+      "backend_tecnology": "Nestjs | Express",
+      "databases": "postgres",
+      "errors_count": 0,
+      "warning_count": 0,
+      "deploy_count": 0,
+      "percentage_completion": 0,
+      "report_nc": 0,
+      "status": "En Desarrollo",
+      "id": "oLqFAPz"
+    },
+    {
+      "project_name": "Tortor Dictum Institute",
+      "repo_url": "OL",
+      "client": "Tortor Dictum Institute",
+      "developers": "Blas",
+      "ci": true,
+      "cd": true,
+      "frontend_tecnology": "React",
+      "backend_tecnology": "Nestjs",
+      "databases": "postgres",
+      "errors_count": 0,
+      "warning_count": 0,
+      "deploy_count": 0,
+      "percentage_completion": 0,
+      "report_nc": 0,
+      "status": "En Desarrollo",
+      "id": "Zs5sMfa"
     }
   ],
   "rols": [
@@ -2011,7 +2012,7 @@
     {
       "name": "Gradysf",
       "last_name": "Stevens",
-      "list": "VueJS|Angular|.Net|React-Native|React|Java|Python|SQLServer|NodeJS",
+      "list": "Python | .Net | VueJS | React | SQLServer",
       "area": "Soporte",
       "rol": 1,
       "url_photo": "",
@@ -2819,13 +2820,13 @@
       "area": "Soporte"
     },
     {
-      "id": "93",
       "name": "Dorian",
       "last_name": "Lucas",
-      "url_photo": "",
+      "list": "Angular|SQLServer|.Net|Java|NodeJS|Python | VueJS",
+      "area": "Staff",
       "rol": 2,
-      "list": "Angular|SQLServer|.Net|Java|NodeJS|Python",
-      "area": "Staff"
+      "url_photo": "",
+      "id": "93"
     },
     {
       "id": "94",
@@ -2889,6 +2890,24 @@
       "rol": 2,
       "url_photo": "",
       "id": "m3p0Mjy"
+    },
+    {
+      "name": "Camilla andrea",
+      "last_name": "calderon",
+      "list": "react",
+      "area": "4",
+      "rol": 1,
+      "url_photo": "",
+      "id": "huPyG2h"
+    },
+    {
+      "name": "Camilla andrea ss",
+      "last_name": "calderon",
+      "list": "Python | .Net | VueJS",
+      "area": "3",
+      "rol": 1,
+      "url_photo": "",
+      "id": "xDMDsQT"
     }
   ]
 }

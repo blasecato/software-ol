@@ -20,7 +20,7 @@ export const FormLogin = () => {
   };
   return (
     <Form
-      name="basic"
+      name="formLogin"
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
       autoComplete="off"

@@ -1,9 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import type { FormProps } from 'antd';
-import { Button, Checkbox, Form, Input, message } from 'antd';
+import { Button, Checkbox, Form, Input, message, Select } from 'antd';
 import { type IProjects } from '../../../../../services/projects/projects.constants';
 import { useAppDispatch } from '../../../../../services/_common/hooks';
 import { createProject, updateProject } from '../../../../../services/projects/projects.thunk';
+import type { SelectProps } from 'antd';
+
 
 interface Props {
   handleCancel: () => void
@@ -14,15 +17,34 @@ const FormProjects = ({ handleCancel, project }: Props) => {
   const dispatch = useAppDispatch();
 
   const onFinish: FormProps<IProjects>['onFinish'] = (values) => {
+
+    const namesDevs: any = values.developers;
+    const namesFront: any = values.frontend_tecnology;
+    const namesBack: any = values.backend_tecnology;
+    let devs: any = undefined
+    let front: any = undefined
+    let back: any = undefined
+
+    if (Array.isArray(namesDevs)) {
+      devs = namesDevs?.join(" | ");
+    }
+    if (Array.isArray(namesFront)) {
+      front = namesFront?.join(" | ");
+    }
+    if (Array.isArray(namesBack)) {
+      back = namesBack?.join(" | ");
+    }
+
+
     const newValues: IProjects = {
       project_name: values.project_name,
       repo_url: values.repo_url,
       client: values.client,
-      developers: values.developers,
+      developers: devs ?? values.developers,
       ci: values.ci ?? false,
       cd: values.cd ?? false,
-      frontend_tecnology: values.frontend_tecnology,
-      backend_tecnology: values.backend_tecnology,
+      frontend_tecnology: front ?? values.frontend_tecnology,
+      backend_tecnology: back ?? values.backend_tecnology,
       databases: values.databases,
       errors_count: project?.errors_count ?? 0,
       warning_count: project?.warning_count ?? 0,
@@ -42,10 +64,28 @@ const FormProjects = ({ handleCancel, project }: Props) => {
     }
   };
 
-
   const onFinishFailed: FormProps<IProjects>['onFinishFailed'] = () => {
     message.warning('llene el formulario')
   };
+
+  const options: SelectProps['options'] = [
+    { value: 'Sebastian', label: "Sebastian" },
+    { value: 'Blas', label: "Blas" },
+    { value: 'Andres', label: "Andres" },
+    { value: 'Carlos', label: "Carlos" },
+    { value: "mateo", label: "Mateo" },
+  ];
+  const optionsFront: SelectProps['options'] = [
+    { value: 'React', label: "React" },
+    { value: 'Angular', label: "Angular" },
+    { value: 'Vue', label: "Vue" },
+  ];
+  const optionsBack: SelectProps['options'] = [
+    { value: 'Nestjs', label: "Nestjs" },
+    { value: 'Express', label: "Express" },
+    { value: '.NET', label: ".NET" },
+    { value: 'Java', label: "Java" },
+  ];
 
   return (
     <Form
@@ -98,7 +138,12 @@ const FormProjects = ({ handleCancel, project }: Props) => {
           name="developers"
           rules={[{ required: true, message: 'Porfavor ingrese el nombre de los desarrolladores!' }]}
         >
-          <Input defaultValue={project?.developers} className='custom-input' placeholder='Desarrollador 1 | Desarrollador 2 ...' />
+          <Select
+            mode="multiple"
+            allowClear
+            placeholder="Seleccione"
+            options={options}
+          />
         </Form.Item>
       </div>
 
@@ -108,7 +153,12 @@ const FormProjects = ({ handleCancel, project }: Props) => {
           name="frontend_tecnology"
           rules={[{ required: true, message: 'Porfavor ingrese la tecnologia!' }]}
         >
-          <Input defaultValue={project?.frontend_tecnology} className='custom-input' placeholder='Reactjs... angularjs...' />
+          <Select
+            mode="multiple"
+            allowClear
+            placeholder="Seleccione"
+            options={optionsFront}
+          />
         </Form.Item>
       </div>
 
@@ -118,7 +168,12 @@ const FormProjects = ({ handleCancel, project }: Props) => {
           name="backend_tecnology"
           rules={[{ required: true, message: 'Porfavor ingrese la tecnologia!' }]}
         >
-          <Input defaultValue={project?.backend_tecnology} className='custom-input' placeholder='.NET... Nestjs...' />
+          <Select
+            mode="multiple"
+            allowClear
+            placeholder="Seleccione"
+            options={optionsBack}
+          />
         </Form.Item>
       </div>
 

@@ -73,6 +73,19 @@ const TableUsers = ({ listUsers }: Props) => {
       title: 'Area',
       dataIndex: 'area',
       key: 'area',
+      render: (_, record) => (
+        <span >
+          {record.area === '1' ?
+            'Soporte'
+            :
+            record.area === '2' ? 'Desarrollo'
+              :
+              record.area === '3' ? 'Diseño'
+                :
+                record.area === '4' ? 'RH' : record.area
+          }
+        </span>
+      ),
     },
     {
       title: 'Editar/Eliminar',
