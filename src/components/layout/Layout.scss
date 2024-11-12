@@ -41,5 +41,19 @@
       }
     }
   }
+  @media only screen and (max-width: 768px) {
+    .menu-left {
+      position: fixed;
+      z-index: 31;
+      left: 0;
+    }
+    .container-child {
+      .content {
+        &-min {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 

@@ -94,5 +94,23 @@
       width: 100px;
     }
   }
+  @media only screen and (max-width: 768px) {
+    .content {
+      .item {
+        width: 100%;
+        .card-graph {
+          height: auto;
+        }
+      }
+    }
+    .item-big {
+      .card-big {
+        flex-direction: column;
+        .box {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
