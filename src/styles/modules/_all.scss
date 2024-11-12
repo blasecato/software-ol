@@ -1,11 +1,11 @@
 // Pages
-@use "../../pages/public/login/Login.scss" as *;
-@use "../../pages/private/dashboard/Dashboard.scss" as *;
-@use "../../pages/private/projects/Projects.scss" as *;
+@import "../../pages/public/login/Login.scss";
+@import "../../pages/private/dashboard/Dashboard.scss";
+@import "../../pages/private/projects/Projects.scss";
 
 // components
-@use "../../components/404/404.scss" as *;
-@use "../../components/Loader/Loader.scss" as *;
-@use "../../components/header/Header.scss" as *;
-@use "../../components/layout/Layout.scss" as *;
+@import "../../components/404/404.scss";
+@import "../../components/Loader/Loader.scss";
+@import "../../components/header/Header.scss";
+@import "../../components/layout/Layout.scss";
 
