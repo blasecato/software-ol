@@ -1,0 +1,28 @@
+.Login {
+  .container {
+    min-height: 100vh;
+    .card-login {
+      padding: 30px;
+      background-color: var(--colors-white);
+      width: 400px;
+      margin: 0 auto;
+      border-radius: 5px;
+      box-shadow: 3px 4px 16px 1px rgba(0, 0, 0, 0.2);
+
+      .logo {
+        width: 60px;
+      }
+      .button-primary {
+        width: 100%;
+      }
+      .form-login {
+        .button-link {
+          color: $colors-black;
+          font-weight: 500;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+

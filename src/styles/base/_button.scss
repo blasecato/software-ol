@@ -1,0 +1,39 @@
+.button {
+  &-primary {
+    @include button-txt;
+    background: var(--colors-primary);
+    border: none;
+    color: var(--colors-white);
+    border-radius: 10px;
+    padding: 16.5px 28px;
+    border: none;
+    height: 45px;
+    &:hover,
+    &:active {
+      background: var(--colors-primary) !important;
+      border: none !important;
+      color: var(--colors-white) !important;
+    }
+  }
+  &-cancel {
+    @include button-txt;
+    border: none;
+    color: $colors-primary;
+    border-radius: 10px;
+    padding: 16.5px 28px;
+    border: 2px solid $colors-primary;
+    height: 45px;
+    &:hover,
+    &:active {
+      color: $colors-primary !important;
+      border: 2px solid $colors-primary !important;
+    }
+  }
+  &-link {
+    @include button-txt;
+    background: transparent;
+    border: none;
+    padding: 0 !important;
+  }
+}
+

@@ -1,0 +1,28 @@
+// Breakpoints
+$x-small: 320px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$x-large: 1200px;
+$xx-large: 1600px;
+
+// types
+$Lato: "Lato", sans-serif;
+$Roboto: "Roboto", sans-serif;
+
+// Colors
+$desisable: #b2b2b2;
+$input-line: #bdbdbd;
+$colors-primary: #4c4aad;
+$colors-black: #1b1b1b;
+$colors-white: #ffffff;
+
+// root
+:root {
+  --colors-black: #{$colors-black};
+  --colors-white: #{$colors-white};
+  --colors-primary: #{$colors-primary};
+  --desisable: #{$desisable};
+  --input-line: #{$input-line};
+}
+

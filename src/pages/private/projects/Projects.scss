@@ -1,0 +1,50 @@
+.Projects,
+.Users {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: $colors-white;
+  box-shadow: 9px 8px 15px 1px rgba(0, 0, 0, 0.2);
+  .Table {
+    .button-primary {
+      padding: 10px;
+      .anticon {
+        color: "#fff";
+        font-size: 20px;
+      }
+    }
+    .inDev {
+      background: #e0d027;
+      padding: 5px 20px;
+      border-radius: 20px;
+    }
+    .avatar {
+      height: 35px;
+      border-radius: 50%;
+    }
+    &-admin {
+      .ant-table-cell {
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+    ul {
+      list-style: disc;
+    }
+  }
+}
+
+.modal-form {
+  .ant-modal-footer {
+    display: none;
+  }
+  .ant-modal-title {
+    font-size: 26px;
+  }
+  .btns {
+    .button {
+      width: 49%;
+    }
+  }
+}
+

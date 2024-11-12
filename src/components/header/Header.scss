@@ -1,0 +1,79 @@
+.Header {
+  box-shadow: 3px 4px 16px 1px rgba(0, 0, 0, 0.2);
+  background-color: var(--colors-white);
+  .container {
+    height: 50px;
+    padding: 20px;
+    padding-left: 10px;
+    .logo {
+      width: 50px;
+    }
+    .avatar {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+    }
+    .anticon {
+      font-size: 20px;
+    }
+    .g-100 {
+      gap: 130px;
+    }
+    .alert {
+      position: relative;
+      .circle {
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        background-color: $colors-primary;
+        position: absolute;
+        top: 6px;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+.popover-alert-item {
+  .notification {
+    .circle-icon {
+      color: $colors-white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      &-error {
+        background-color: #ff0000;
+      }
+      &-warning {
+        background-color: #ffd900;
+      }
+      &-info {
+        background-color: #5ce00f;
+      }
+    }
+  }
+  .close {
+    font-size: 15px;
+  }
+  .head {
+    margin-bottom: 15px;
+    border-bottom: 1px solid $input-line;
+    padding-bottom: 15px;
+  }
+  .task {
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid $input-line;
+    padding: 20px;
+    &-check {
+      .ant-checkbox-wrapper {
+        span {
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+}
+
