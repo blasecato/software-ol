@@ -1,6 +1,12 @@
 import { createContext, useState } from 'react';
 
-const MenuContext = createContext({});
+interface MenuContextType {
+  isMenuOpen: boolean;
+  changeActionMenu: () => void
+  // Otros valores o funciones del contexto, si los tienes
+}
+
+const MenuContext = createContext<MenuContextType | undefined>(undefined);
 
 interface Props {
   children: React.ReactNode;

@@ -16,7 +16,7 @@ const CardServerDetail = ({ percentajeTime, deploys, time }: Props) => {
   const [isData, setData] = useState<any>()
   const [isOptions, setOptions] = useState<any>()
   useEffect(() => {
-    if (time !== null && time.length >= 1) {
+    if (time !== null && time?.length >= 1) {
       const labels = time.map(item => item.time);
       const dataValues = time.map(item => item.value);
 

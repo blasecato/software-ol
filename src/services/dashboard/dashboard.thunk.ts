@@ -6,7 +6,7 @@ import GeneralApi from '../_common/geberalApi';
 
 export const getWeather = createAsyncThunk(
   'get/weather',
-  async ({ city }: any, { rejectWithValue }) => {
+  async (city: string, { rejectWithValue }) => {
     try {
       const url = `${API_URL_CLIMATE}?q=${city}&appid=${API_KEY_CLIMATE}&units=metric&lang=en`;
       const response = await fetch(url);

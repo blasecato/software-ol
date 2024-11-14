@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 
 import type { FormProps, SelectProps } from 'antd';
 import { Button, Form, Input, message, Select } from 'antd';
@@ -42,18 +42,10 @@ const FormUser = ({ handleCancel, user }: Props) => {
   ]
   const onFinish: FormProps<IUsers>['onFinish'] = (values) => {
 
-    const namesList: any = values.list;
-    let list: any = undefined
-
-    if (Array.isArray(namesList)) {
-      list = namesList?.join(" | ");
-    }
-
-
     const newValues: IUsers = {
       name: values.name,
       last_name: values.last_name,
-      list: list ?? values.list,
+      list: values.list,
       area: `${values.area}`,
       rol: values?.rol,
       url_photo: '',

@@ -26,7 +26,7 @@ const Projects = () => {
       <div className="flex flex-end">
         <ModalFormProjects title={<span>Agregar proyecto</span>} />
       </div>
-      <TableProjects listProjects={isListProjects} />
+      <TableProjects listProjects={isListProjects ?? []} />
     </div>
   )
 }

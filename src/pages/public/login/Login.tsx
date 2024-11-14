@@ -1,7 +1,6 @@
 import LogoPng from '../../../assets/images/logo-OL.png'
 import { FormLogin } from './components/formLogin/FormLogin';
 
-
 export const Login = () => {
   return (
     <aside className="Login">

@@ -13,6 +13,8 @@ type FieldType = {
 export const FormLogin = () => {
   const dispatch = useAppDispatch();
   const onFinish: FormProps<FieldType>['onFinish'] = (values) => {
+    console.log(values);
+
     dispatch(loginAction(values));
   };
   const onFinishFailed: FormProps<FieldType>['onFinishFailed'] = () => {

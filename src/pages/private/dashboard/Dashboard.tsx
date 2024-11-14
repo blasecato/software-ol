@@ -30,7 +30,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     if (user?.location !== undefined) {
-      dispatch(getWeather({ city: user?.location }));
+      dispatch(getWeather(user?.location));
     }
   }, [dispatch, user, authentication, dashboardCards])
 

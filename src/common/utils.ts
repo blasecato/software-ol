@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 export function relativeTime(dateStr: string) {
   const [day, month, year, hours, minutes, seconds] = dateStr.split(/[/ :]/).map(Number);
   const date: any = new Date(year, month - 1, day, hours, minutes, seconds);

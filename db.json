@@ -224,7 +224,7 @@
       "cd": false,
       "frontend_tecnology": "VueJS|React-Native|Angular|React",
       "backend_tecnology": "Python, .Net, NodeJS",
-      "databases": "ORACLE|PosgresSQL",
+      "databases": "ORACLE",
       "errors_count": 57,
       "warning_count": 4,
       "deploy_count": 9,
@@ -1978,6 +1978,33 @@
       "report_nc": 0,
       "status": "En Desarrollo",
       "id": "Zs5sMfa"
+    },
+    {
+      "project_name": "software OL",
+      "repo_url": "Tortor Dictum Institute",
+      "client": "andres",
+      "developers": [
+        "Sebastian",
+        "Blas"
+      ],
+      "ci": true,
+      "cd": false,
+      "frontend_tecnology": [
+        "React",
+        "React native"
+      ],
+      "backend_tecnology": [
+        "Nestjs",
+        "Express"
+      ],
+      "databases": "postgres",
+      "errors_count": 0,
+      "warning_count": 0,
+      "deploy_count": 0,
+      "percentage_completion": 0,
+      "report_nc": 0,
+      "status": "En Desarrollo",
+      "id": "p3p9eeY"
     }
   ],
   "rols": [
@@ -2899,6 +2926,22 @@
       "rol": 2,
       "url_photo": "",
       "id": "aCfuSlW"
+    },
+    {
+      "name": "blassssssssssss",
+      "last_name": "torres",
+      "list": [
+        "React-Native",
+        ".Net",
+        "Python",
+        "VueJS",
+        "React",
+        "SQLServer"
+      ],
+      "area": "1",
+      "rol": 1,
+      "url_photo": "",
+      "id": "33s4yKc"
     }
   ]
 }

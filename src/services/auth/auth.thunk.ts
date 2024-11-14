@@ -2,6 +2,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { SignJWT } from 'jose';
 import authApi from './auth.api';
+import { message } from 'antd';
 
 async function generateToken(payload: any) {
   const jwt = await new SignJWT(payload)
@@ -19,14 +20,15 @@ export const login = createAsyncThunk(
         `/login?user=${user}&password=${password}`
       );
       if (response.length === 0 && response[0].id === undefined) {
+        message.error('Credenciales incorrectas')
         throw new Error('Error de autenticación');
       }
       generateToken(response[0]).then(token => {
         localStorage.setItem('Token', token);
       });
-
       return response;
     } catch (error: any) {
+      message.error('Credenciales incorrectas')
       return rejectWithValue(error.message);
     }
   }

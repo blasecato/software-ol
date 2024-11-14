@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 
 import type { FormProps } from 'antd';
 import { Button, Checkbox, Form, Input, message, Select } from 'antd';
@@ -20,33 +20,15 @@ const FormProjects = ({ handleCancel, project }: Props) => {
 
   const onFinish: FormProps<IProjects>['onFinish'] = (values) => {
 
-    const namesDevs: any = values.developers;
-    const namesFront: any = values.frontend_tecnology;
-    const namesBack: any = values.backend_tecnology;
-    let devs: any = undefined
-    let front: any = undefined
-    let back: any = undefined
-
-    if (Array.isArray(namesDevs)) {
-      devs = namesDevs?.join(" | ");
-    }
-    if (Array.isArray(namesFront)) {
-      front = namesFront?.join(" | ");
-    }
-    if (Array.isArray(namesBack)) {
-      back = namesBack?.join(" | ");
-    }
-
-
     const newValues: IProjects = {
       project_name: values.project_name,
       repo_url: values.repo_url,
       client: values.client,
-      developers: devs ?? values.developers,
+      developers: values.developers,
       ci: values.ci ?? false,
       cd: values.cd ?? false,
-      frontend_tecnology: front ?? values.frontend_tecnology,
-      backend_tecnology: back ?? values.backend_tecnology,
+      frontend_tecnology: values.frontend_tecnology,
+      backend_tecnology: values.backend_tecnology,
       databases: values.databases,
       errors_count: project?.errors_count ?? 0,
       warning_count: project?.warning_count ?? 0,
@@ -55,6 +37,9 @@ const FormProjects = ({ handleCancel, project }: Props) => {
       report_nc: project?.report_nc ?? 0,
       status: "En Desarrollo"
     }
+
+    console.log("newValues", newValues);
+
 
     if (project === undefined) {
       dispatch(createProject({ project: newValues }))
@@ -81,6 +66,10 @@ const FormProjects = ({ handleCancel, project }: Props) => {
     { value: 'React', label: "React" },
     { value: 'Angular', label: "Angular" },
     { value: 'Vue', label: "Vue" },
+    { value: 'Flutter', label: "Flutter" },
+    { value: 'React native', label: "React native" },
+    { value: 'VITE', label: "VITE" },
+    { value: 'Nextjs', label: "Nextjs" },
   ];
   const optionsBack: SelectProps['options'] = [
     { value: 'Nestjs', label: "Nestjs" },

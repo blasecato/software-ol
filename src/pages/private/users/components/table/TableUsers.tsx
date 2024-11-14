@@ -59,7 +59,13 @@ const TableUsers = ({ listUsers }: Props) => {
       dataIndex: 'list',
       key: 'list',
       render: (_, record) => {
-        const items = record.list.split('|');
+        let items: any = []
+        if (Array.isArray(record.list)) {
+          items = record.list
+        }
+        else {
+          items = record.list.split('|');
+        }
         return (
           <ul>
             {items.map((item, index) => (

@@ -34,18 +34,24 @@ const TableProjects = ({ listProjects }: Props) => {
     },
     {
       title: 'Repositorio',
-      dataIndex: 'project_name',
-      key: 'project_name',
+      dataIndex: 'repo_url',
+      key: 'repo_url',
     },
     {
       title: 'Desarrolladores',
       dataIndex: 'developers',
       key: 'developers',
       render: (_, record) => {
-        const items = record.developers.split('|');
+        let items = []
+        if (Array.isArray(record?.developers)) {
+          items = record?.developers
+        }
+        else {
+          items = record.developers.split('|');
+        }
         return (
           <ul>
-            {items.map((item, index) => (
+            {items?.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
           </ul>
@@ -83,7 +89,13 @@ const TableProjects = ({ listProjects }: Props) => {
       dataIndex: 'frontend_tecnology',
       key: 'frontend_tecnology',
       render: (_, record) => {
-        const items = record.frontend_tecnology.split('|');
+        let items: any = []
+        if (Array.isArray(record?.frontend_tecnology)) {
+          items = record.frontend_tecnology
+        }
+        else {
+          items = record.frontend_tecnology.split('|');
+        }
         return (
           <ul>
             {items.map((item, index) => (
@@ -98,7 +110,13 @@ const TableProjects = ({ listProjects }: Props) => {
       dataIndex: 'backend_tecnology',
       key: 'backend_tecnology',
       render: (_, record) => {
-        const items = record.backend_tecnology.split(',');
+        let items: any = []
+        if (Array.isArray(record?.backend_tecnology)) {
+          items = record.backend_tecnology
+        }
+        else {
+          items = record.backend_tecnology.split(',');
+        }
         return (
           <ul>
             {items.map((item, index) => (
