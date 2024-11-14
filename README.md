@@ -4,7 +4,7 @@ Herramienta	- Version
 
 Node.js	- v21.7.3
 
-Json-server	npm i -g json-server - json-server
+npm i -g json-server - json-server
 
 
 
