@@ -2005,6 +2005,34 @@
       "report_nc": 0,
       "status": "En Desarrollo",
       "id": "p3p9eeY"
+    },
+    {
+      "project_name": "new",
+      "repo_url": "s",
+      "client": "s",
+      "developers": [
+        "Sebastian",
+        "Andres"
+      ],
+      "ci": true,
+      "cd": false,
+      "frontend_tecnology": [
+        "React native",
+        "Vue"
+      ],
+      "backend_tecnology": [
+        "Express",
+        ".NET",
+        "Java"
+      ],
+      "databases": "postgres | mysql",
+      "errors_count": 0,
+      "warning_count": 0,
+      "deploy_count": 0,
+      "percentage_completion": 0,
+      "report_nc": 0,
+      "status": "En Desarrollo",
+      "id": "X_XpW0L"
     }
   ],
   "rols": [

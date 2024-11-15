@@ -26,7 +26,7 @@ const Users = () => {
       <div className="flex flex-end">
         <ModalFormUsers title={<span>Agregar Usuario</span>} />
       </div>
-      <TableUsers listUsers={isListUsers ?? []} />
+      <TableUsers listUsers={isListUsers?.slice().reverse() ?? []} />
     </div>
   )
 }
