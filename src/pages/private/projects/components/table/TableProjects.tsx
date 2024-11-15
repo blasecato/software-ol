@@ -50,7 +50,7 @@ const TableProjects = ({ listProjects }: Props) => {
           items = record.developers.split('|');
         }
         return (
-          <ul>
+          <ul key={`devs-${record.client}`}>
             {items?.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
@@ -97,7 +97,7 @@ const TableProjects = ({ listProjects }: Props) => {
           items = record.frontend_tecnology.split('|');
         }
         return (
-          <ul>
+          <ul key={`item-${record.id}`}>
             {items.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
@@ -118,7 +118,7 @@ const TableProjects = ({ listProjects }: Props) => {
           items = record.backend_tecnology.split(',');
         }
         return (
-          <ul>
+          <ul key={`item-${record.project_name}`}>
             {items.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
@@ -133,7 +133,7 @@ const TableProjects = ({ listProjects }: Props) => {
       render: (_, record) => {
         const items = record.databases.split('|');
         return (
-          <ul>
+          <ul key={`item-${record.client}`}>
             {items.map((item, index) => (
               <li key={index}>{item}</li>
             ))}

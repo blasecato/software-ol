@@ -67,7 +67,7 @@ const TableUsers = ({ listUsers }: Props) => {
           items = record.list.split('|');
         }
         return (
-          <ul>
+          <ul key={`item-${record.name}`}>
             {items.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
